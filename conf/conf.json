@@ -1,0 +1,16 @@
+{
+  "Db": {
+    "Engine": "mysql",
+    "Username": "cluster_user",
+    "Password": "User@123456",
+    "Host": "localhost",
+    "Port": 3306,
+    "Database": "cluster_db",
+    "Charset": "utf8",
+    "ShowSql": true,
+    "MaxIdleConns": 2,
+    "MaxOpenConns": 10,
+    "ConnMaxLifetime": 30
+  },
+  "Cache": {}
+}
