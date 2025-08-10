@@ -12,6 +12,9 @@ import (
 	"user_growth/pb"
 )
 
+// 单连接支持上万并发请求，但延迟较高，适合批量处理任务
+// sync.Pool 只是临时存储连接，连接池的连接会在一段时间后会被垃圾回收，
+// Get方法获取的对象会一直被引用！！！不会被垃圾回收
 var connPool = sync.Pool{
 	New: func() any {
 		// 连接到服务
